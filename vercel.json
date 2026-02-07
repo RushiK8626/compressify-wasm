@@ -1,13 +1,13 @@
 {
-    "headers": [
+  "headers": [
+    {
+      "source": "/(.*)\\.wasm",
+      "headers": [
         {
-            "source": "/(.*).wasm",
-            "header": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/wasm"
-                }
-            ]
+          "key": "Content-Type",
+          "value": "application/wasm"
         }
-    ]
+      ]
+    }
+  ]
 }
