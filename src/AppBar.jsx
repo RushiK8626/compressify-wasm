@@ -27,20 +27,18 @@ export default function Header({ toggleTheme }) {
             variant="h6"
             component="div"
             sx={{
+              fontFamily: 'Roboto, Arial, Helvetica, "Segoe UI", sans-serif',
+              fontWeight: 1000,
+              fontSize: 25,
               flexGrow: 1,
               textAlign: 'center',
               whiteSpace: 'nowrap',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
-              minWidth: 0,
-              fontSize: {
-                xs: '0.875rem',
-                sm: '1rem',
-                md: '1.25rem'
-              }
+              minWidth: 0
             }}
           >
-            File Compressor and Decompressor
+            Compressify
           </Typography>
 
           <IconButton

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Compressify",
+  "name": "Compressify - File Compression and Decompression Tool",
   "icons": [
     {
       "src": "favicon.ico",

@@ -24,14 +24,16 @@ export default function OptionsRadioGroup({ onChangeSelectedMode }) {
         alignItems: 'center',
         justifyContent: 'center',
         mt: 2,
-        width: '100%'
+        width: '100%',
+        px: { xs: 2, sm: 0 }
       }}
     >
       <Paper
         elevation={3}
         sx={{
           height: 120,
-          width: 420,
+          width: { xs: '100%', sm: 420 },
+          maxWidth: 420,
           p: 3,
           display: "flex",
           flexDirection: "column",

@@ -171,9 +171,10 @@ export default function FileConvertorPanel() {
           sx={{
             mt: 6,
             mb: 6,
+            mx: { xs: 2, sm: 4, md: 10 },
             display: 'flex',
             justifyContent: 'center',
-            width: '100%'
+            width: '100%',
           }}
         >
           <OptionsRadioGroup onChangeSelectedMode={changeSelectedMode} />
@@ -181,7 +182,7 @@ export default function FileConvertorPanel() {
 
         {/* Panels Section */}
         <Box sx={{
-          px: 4,
+          px: { xs: 2, sm: 4 },
           display: 'flex',
           justifyContent: 'center',
           width: '100%',
@@ -189,11 +190,13 @@ export default function FileConvertorPanel() {
         }}>
           <Grid
             container
-            spacing={4}
+            spacing={{ xs: 2, sm: 4 }}
             sx={{
               maxWidth: 1000,
+              width: '100%',
               justifyContent: 'center',
-              alignItems: 'stretch'
+              alignItems: 'stretch',
+              margin: 0
             }}
           >
             {/* Upload Panel */}
