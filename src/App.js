@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import HomePage from './HomePage'
+import Box from '@mui/material/Box';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 function App() {
+  const [mode, setMode] = useState(localStorage.getItem("mode") || "light");
+
+  const toggleTheme = () => {
+    setMode((prev) => {
+      const newMode = (prev === "light" ? "dark" : "light");
+      localStorage.setItem("mode", newMode);
+      return newMode;
+    });
+  };
+
+  const theme = createTheme({
+    palette: {
+      mode,
+      primary: {
+        main: mode === 'dark' ? '#B39DDB ' : '#5C3E94',
+      },
+    },
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <Box sx={{ flexGrow: 1 }}>
+        <HomePage toggleTheme={toggleTheme}/>
+      </Box>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
